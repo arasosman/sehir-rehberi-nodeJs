@@ -7,7 +7,9 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const movieRouter = require('./routes/movie');
+const categoryRouter = require('./routes/category');
 const movieCrawlerRouter = require('./routes/movieCrawler');
+
 var cors = require('cors')
 const app = express();
 
@@ -34,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 //app.use('/api', verifyToken);
 app.use('/api/movies', movieRouter);
+app.use('/api/category', categoryRouter);
 app.use('/api/users', usersRouter);
 app.use('/crawler/movie', movieCrawlerRouter);
 

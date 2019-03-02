@@ -5,7 +5,13 @@ const Movie = require('../models/Movie')
 /* GET home page. */
 router.get('/',(req, res, next) => {
 
-    const promise = Movie.find({});
+    const categoryId = req.query.categoryId;
+    let promise;
+    if(categoryId){
+        promise = Movie.find({categoryId:categoryId});
+    }else{
+        promise = Movie.find({});
+    }
 
     promise.then((data) => {
         res.json(data)
