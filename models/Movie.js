@@ -9,6 +9,7 @@ const MovieSchema = new Schema({
     category: String,
     country: String,
     year: Number,
+    img: String,
     imdb_score: Number,
     date : {
         type: Date,
