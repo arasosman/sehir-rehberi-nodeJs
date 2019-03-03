@@ -1,0 +1,406 @@
+extends ../admin-layout
+
+block content
+    .content-wrapper
+        .container-fluid
+            // Breadcrumbs
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='#') Dashboard
+                li.breadcrumb-item.active Add listing
+            .box_general.padding_bottom
+                .header_box.version_2
+                    h2
+                        i.fa.fa-file
+                        | Basic info
+                .row
+                    .col-md-6
+                        .form-group
+                            label Listing Title
+                            input.form-control(type='text', placeholder='Hotel Mariott')
+                    .col-md-6
+                        .form-group
+                            label Category
+                            .styled-select
+                                select
+                                    option Hotel
+                                    option Shops
+                                    option Restaurant
+                                    option Bar
+                // /row
+                .row
+                    .col-md-6
+                        .form-group
+                            label Keywords
+                            input.form-control(type='text', placeholder='Keywords should be separated by commas')
+                // /row
+                .row
+                    .col-md-12
+                        .form-group
+                            label Description
+                            .editor
+                // /row
+                .row
+                    .col-md-4
+                        .form-group
+                            label Phone (Optional)
+                            input.form-control(type='text')
+                    .col-md-4
+                        .form-group
+                            label Web site (Optional)
+                            input.form-control(type='text')
+                    .col-md-4
+                        .form-group
+                            label Email (Optional)
+                            input.form-control(type='text')
+                // /row
+                .row
+                    .col-md-4
+                        .form-group
+                            label Facebook link (Optional)
+                            input.form-control(type='text')
+                    .col-md-4
+                        .form-group
+                            label Twitter link (Optional)
+                            input.form-control(type='text')
+                    .col-md-4
+                        .form-group
+                            label Google + (Optional)
+                            input.form-control(type='text')
+                // /row
+                .row
+                    .col-md-12
+                        .form-group
+                            label Photos
+                            form.dropzone(action='/file-upload')
+                // /row
+                // /box_general
+                .box_general.padding_bottom
+                    .header_box.version_2
+                        h2
+                            i.fa.fa-map-marker
+                            | Location
+                    .row
+                        .col-md-6
+                            .form-group
+                                label Select City
+                                .styled-select
+                                    select
+                                        option Miami
+                                        option New York
+                                        option Los Angeles
+                                        option San Francisco
+                        .col-md-6
+                            .form-group
+                                label Address
+                                input.form-control(type='text', placeholder='ex. 250, Fifth Avenue...')
+                    // /row
+                    .row
+                        .col-md-6
+                            .form-group
+                                label State
+                                input.form-control(type='text')
+                        .col-md-6
+                            .form-group
+                                label Zip Code
+                                input.form-control(type='text')
+                    // /row
+                    // /box_general
+                    .box_general.padding_bottom
+                        .header_box.version_2
+                            h2
+                                i.fa.fa-clock-o
+                                | Opening
+                        .row
+                            .col-md-2
+                                label.fix_spacing Monday
+                            .col-md-5
+                                .form-group
+                                    .styled-select
+                                        select
+                                            option Opening Time
+                                            option Closed
+                                            option 1 AM
+                                            option 2 AM
+                                            option 3 AM
+                                            option 4 AM
+                                            option 5 AM
+                                            option 6 AM
+                                            option 7 AM
+                                            option 8 AM
+                                            option 9 AM
+                                            option 10 AM
+                                            option 11 AM
+                                            option 12 AM
+                                            option 1 PM
+                                            option 2 PM
+                                            option 3 PM
+                                            option 4 PM
+                                            option 5 PM
+                                            option 6 PM
+                                            option 7 PM
+                                            option 8 PM
+                                            option 9 PM
+                                            option 10 PM
+                                            option 11 PM
+                                            option 12 PM
+                            .col-md-5
+                                .form-group
+                                    .styled-select
+                                        select
+                                            option Closing Time
+                                            option Closed
+                                            option 1 AM
+                                            option 2 AM
+                                            option 3 AM
+                                            option 4 AM
+                                            option 5 AM
+                                            option 6 AM
+                                            option 7 AM
+                                            option 8 AM
+                                            option 9 AM
+                                            option 10 AM
+                                            option 11 AM
+                                            option 12 AM
+                                            option 1 PM
+                                            option 2 PM
+                                            option 3 PM
+                                            option 4 PM
+                                            option 5 PM
+                                            option 6 PM
+                                            option 7 PM
+                                            option 8 PM
+                                            option 9 PM
+                                            option 10 PM
+                                            option 11 PM
+                                            option 12 PM
+                        // /row
+                        .row
+                            .col-md-2
+                                label.fix_spacing Tuesday
+                            .col-md-5
+                                .form-group
+                                    .styled-select
+                                        select
+                                            option Opening Time
+                                            option Closed
+                                            option 1 AM
+                                            option 2 AM
+                                            option 3 AM
+                                            option 4 AM
+                                            option 5 AM
+                                            option 6 AM
+                                            option 7 AM
+                                            option 8 AM
+                                            option 9 AM
+                                            option 10 AM
+                                            option 11 AM
+                                            option 12 AM
+                                            option 1 PM
+                                            option 2 PM
+                                            option 3 PM
+                                            option 4 PM
+                                            option 5 PM
+                                            option 6 PM
+                                            option 7 PM
+                                            option 8 PM
+                                            option 9 PM
+                                            option 10 PM
+                                            option 11 PM
+                                            option 12 PM
+                            .col-md-5
+                                .form-group
+                                    .styled-select
+                                        select
+                                            option Closing Time
+                                            option Closed
+                                            option 1 AM
+                                            option 2 AM
+                                            option 3 AM
+                                            option 4 AM
+                                            option 5 AM
+                                            option 6 AM
+                                            option 7 AM
+                                            option 8 AM
+                                            option 9 AM
+                                            option 10 AM
+                                            option 11 AM
+                                            option 12 AM
+                                            option 1 PM
+                                            option 2 PM
+                                            option 3 PM
+                                            option 4 PM
+                                            option 5 PM
+                                            option 6 PM
+                                            option 7 PM
+                                            option 8 PM
+                                            option 9 PM
+                                            option 10 PM
+                                            option 11 PM
+                                            option 12 PM
+                        // /row
+                        .row
+                            .col-md-2
+                                label.fix_spacing Wednesday
+                            .col-md-5
+                                .form-group
+                                    .styled-select
+                                        select
+                                            option Opening Time
+                                            option Closed
+                                            option 1 AM
+                                            option 2 AM
+                                            option 3 AM
+                                            option 4 AM
+                                            option 5 AM
+                                            option 6 AM
+                                            option 7 AM
+                                            option 8 AM
+                                            option 9 AM
+                                            option 10 AM
+                                            option 11 AM
+                                            option 12 AM
+                                            option 1 PM
+                                            option 2 PM
+                                            option 3 PM
+                                            option 4 PM
+                                            option 5 PM
+                                            option 6 PM
+                                            option 7 PM
+                                            option 8 PM
+                                            option 9 PM
+                                            option 10 PM
+                                            option 11 PM
+                                            option 12 PM
+                            .col-md-5
+                                .form-group
+                                    .styled-select
+                                        select
+                                            option Closing Time
+                                            option Closed
+                                            option 1 AM
+                                            option 2 AM
+                                            option 3 AM
+                                            option 4 AM
+                                            option 5 AM
+                                            option 6 AM
+                                            option 7 AM
+                                            option 8 AM
+                                            option 9 AM
+                                            option 10 AM
+                                            option 11 AM
+                                            option 12 AM
+                                            option 1 PM
+                                            option 2 PM
+                                            option 3 PM
+                                            option 4 PM
+                                            option 5 PM
+                                            option 6 PM
+                                            option 7 PM
+                                            option 8 PM
+                                            option 9 PM
+                                            option 10 PM
+                                            option 11 PM
+                                            option 12 PM
+                        // /row
+                        .row
+                            .col-md-2
+                                label.fix_spacing Thursday
+                            .col-md-5
+                                .form-group
+                                    .styled-select
+                                        select
+                                            option Opening Time
+                                            option Closed
+                                            option 1 AM
+                                            option 2 AM
+                                            option 3 AM
+                                            option 4 AM
+                                            option 5 AM
+                                            option 6 AM
+                                            option 7 AM
+                                            option 8 AM
+                                            option 9 AM
+                                            option 10 AM
+                                            option 11 AM
+                                            option 12 AM
+                                            option 1 PM
+                                            option 2 PM
+                                            option 3 PM
+                                            option 4 PM
+                                            option 5 PM
+                                            option 6 PM
+                                            option 7 PM
+                                            option 8 PM
+                                            option 9 PM
+                                            option 10 PM
+                                            option 11 PM
+                                            option 12 PM
+                            .col-md-5
+                                .form-group
+                                    .styled-select
+                                        select
+                                            option Closing Time
+                                            option Closed
+                                            option 1 AM
+                                            option 2 AM
+                                            option 3 AM
+                                            option 4 AM
+                                            option 5 AM
+                                            option 6 AM
+                                            option 7 AM
+                                            option 8 AM
+                                            option 9 AM
+                                            option 10 AM
+                                            option 11 AM
+                                            option 12 AM
+                                            option 1 PM
+                                            option 2 PM
+                                            option 3 PM
+                                            option 4 PM
+                                            option 5 PM
+                                            option 6 PM
+                                            option 7 PM
+                                            option 8 PM
+                                            option 9 PM
+                                            option 10 PM
+                                            option 11 PM
+                                            option 12 PM
+                        // /row
+                        // /box_general
+                        .box_general.padding_bottom
+                            .header_box.version_2
+                                h2
+                                    i.fa.fa-dollar
+                                    | Pricing
+                            .row
+                                .col-md-12
+                                    h6 Item
+                                    table#pricing-list-container(style='width:100%;')
+                                        tbody
+                                            tr.pricing-list-item
+                                                td
+                                                    .row
+                                                        .col-md-4
+                                                            .form-group
+                                                                input.form-control(type='text', placeholder='Title')
+                                                        .col-md-4
+                                                            .form-group
+                                                                input.form-control(type='text', placeholder='Description')
+                                                        .col-md-2
+                                                            .form-group
+                                                                input.form-control(type='text', placeholder='Price')
+                                                        .col-md-2
+                                                            .form-group
+                                                                a.delete(href='#')
+                                                                    i.fa.fa-fw.fa-remove
+                                    a.btn_1.gray.add-pricing-list-item(href='#0')
+                                        i.fa.fa-fw.fa-plus-circle
+                                        | Add Item
+                            // /row
+                            // /box_general
+                            p
+                                a.btn_1.medium(href='#0') Save
+        // /.container-fluid
+    // /.container-wrapper
+

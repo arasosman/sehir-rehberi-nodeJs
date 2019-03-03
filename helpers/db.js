@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports = () =>{
-  mongoose.connect('mongodb://osman:123qweasd@ds349045.mlab.com:49045/heroku_kbk6kt6g', { useNewUrlParser: true });
+  mongoose.connect('mongodb://osman:123qweasd@ds357955.mlab.com:57955/heroku_ww2wxp7h', { useNewUrlParser: true });
   mongoose.connection.on('open',()=> {
       //console.log('Connect Db.');
   });

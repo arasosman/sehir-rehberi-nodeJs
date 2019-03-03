@@ -1,17 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const Movie = require('../models/Movie')
+const Number = require('../models/Number')
 
 /* GET home page. */
 router.get('/',(req, res, next) => {
 
-    const categoryId = req.query.categoryId;
-    let promise;
-    if(categoryId){
-        promise = Movie.find({categoryId:categoryId});
-    }else{
-        promise = Movie.find({});
-    }
+    const promise = Number.find({});
+
 
     promise.then((data) => {
         res.json(data)
@@ -20,8 +15,9 @@ router.get('/',(req, res, next) => {
     });
 });
 
-router.get('/top10',(req, res, next) => {
-    const promise = Movie.find({}).limit(10).sort({imdb_score: -1});
+
+router.get('/:number_id',(req, res, next) => {
+    const promise = Number.findById(req.params.number_id);
 
     promise.then( (data) => {
         res.json(data)
@@ -30,8 +26,8 @@ router.get('/top10',(req, res, next) => {
     });
 });
 
-router.get('/:movie_id',(req, res, next) => {
-    const promise = Movie.findById(req.params.movie_id);
+router.get('/tel/:number',(req, res, next) => {
+    const promise = Number.find({number: req.params.number});
 
     promise.then( (data) => {
         res.json(data)
@@ -41,8 +37,8 @@ router.get('/:movie_id',(req, res, next) => {
 });
 
 
-router.put('/:movie_id',(req, res, next) => {
-    const promise = Movie.findByIdAndUpdate(req.params.movie_id, req.body);
+router.put('/:number_id',(req, res, next) => {
+    const promise = Number.findByIdAndUpdate(req.params.number_id, req.body);
 
     promise.then( (data) => {
         res.json({
@@ -55,10 +51,10 @@ router.put('/:movie_id',(req, res, next) => {
 });
 
 
-router.delete('/:movie_id',(req, res, next) => {
-    const promise = Movie.findByIdAndRemove(req.params.movie_id);
+router.delete('/:number_id',(req, res, next) => {
+    const promise = Number.findByIdAndRemove(req.params.number_id);
 
-    promise.then( (movie) => {
+    promise.then( (number) => {
         res.json({
             status : true
         })
@@ -68,9 +64,9 @@ router.delete('/:movie_id',(req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-    const movie = new Movie(req.body);
+    const number = new Number(req.body);
 
-    const promise = movie.save();
+    const promise = number.save();
 
     promise.then((data)=>{
         res.json(data)

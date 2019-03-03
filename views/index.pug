@@ -1,0 +1,297 @@
+extends layout
+
+block content
+  main
+    section.hero_single.version_4
+      .wrapper
+        .container
+          h3 Find what you need!
+          p Discover top rated hotels, shops and restaurants around the world
+          form(method='post', action='grid-listings-filterscol.html')
+            .row.no-gutters.custom-search-input-2
+              .col-lg-4
+                .form-group
+                  input.form-control(type='text', placeholder='What are you looking for...')
+                  i.icon_search
+              .col-lg-3
+                .form-group
+                  input.form-control(type='text', placeholder='Where')
+                  i.icon_pin_alt
+              .col-lg-3
+                select.wide
+                  option All Categories
+                  option Shops
+                  option Hotels
+                  option Restaurants
+                  option Bars
+                  option Events
+                  option Fitness
+              .col-lg-2
+                input(type='submit', value='Search')
+            // /row
+          ul.counter
+            li
+              strong 256,020
+              |  Locations
+            li
+              strong 150,543
+              |  Active users
+
+    .container-fluid.margin_80_55
+      .main_title_2
+        span
+          em
+        h2 Popular listings
+        p Cum doctus civibus efficiantur in imperdiet deterruisset.
+      #reccomended.owl-carousel.owl-theme
+        .item
+          .strip.grid
+            figure
+              a.wish_bt(href='detail-restaurant.html')
+              a(href='detail-restaurant.html')
+                img.img-fluid(src='front/img/location_1.jpeg', alt='', width='400', height='266')
+                .read_more
+                  span Read more
+              small Restaurant
+            .wrapper
+              h3
+                a(href='detail-restaurant.html') Da Alfredo
+              p
+                | Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.
+              a.address(href='https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361') Get directions
+            ul
+              li
+                span.loc_open Now Open
+              li
+                .score
+                  span
+                    | Superb
+                    em 350 Reviews
+                  strong 8.9
+        // /item
+        .item
+          .strip.grid
+            figure
+              a.wish_bt(href='detail-restaurant.html')
+              a(href='detail-restaurant.html')
+                img.img-fluid(src='front/img/location_2.jpeg', alt='', width='400', height='266')
+                .read_more
+                  span Read more
+              small Bar
+            .wrapper
+              h3
+                a(href='detail-restaurant.html') Notredam
+              p
+                | Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.
+              a.address(href='https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361') Get directions
+            ul
+              li
+                span.loc_closed Now Closed
+              li
+                .score
+                  span
+                    | Good
+                    em 350 Reviews
+                  strong 7.0
+        // /item
+        .item
+          .strip.grid
+            figure
+              a.wish_bt(href='detail-shop.html')
+              a(href='detail-shop.html')
+                img.img-fluid(src='front/img/location_3.jpeg', alt='', width='400', height='266')
+                .read_more
+                  span Read more
+              small Shop
+            .wrapper
+              h3
+                a(href='detail-shop.html') Camden Mark
+              p
+                | Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.
+              a.address(href='https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361') Get directions
+            ul
+              li
+                span.loc_open Now Open
+              li
+                .score
+                  span
+                    | Good
+                    em 350 Reviews
+                  strong 7.0
+        // /item
+        .item
+          .strip.grid
+            figure
+              a.wish_bt(href='detail-restaurant.html')
+              a(href='detail-restaurant.html')
+                img.img-fluid(src='front/img/location_4.jpeg', alt='', width='400', height='266')
+                .read_more
+                  span Read more
+              small Bar
+            .wrapper
+              h3
+                a(href='detail-restaurant.html') Bistroter
+              p
+                | Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.
+              a.address(href='https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361') Get directions
+            ul
+              li
+                span.loc_open Now Open
+              li
+                .score
+                  span
+                    | Good
+                    em 350 Reviews
+                  strong 7.0
+        // /item
+        .item
+          .strip.grid
+            figure
+              a.wish_bt(href='detail-hotel.html')
+              a(href='detail-hotel.html')
+                img.img-fluid(src='front/img/location_5.jpeg', alt='', width='400', height='266')
+                .read_more
+                  span Read more
+              small Hotel
+            .wrapper
+              h3
+                a(href='detail-hotel.html') Hotel Concorde
+              p
+                | Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.
+              a.address(href='https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361') Get directions
+            ul
+              li
+                span.loc_closed Now Closed
+              li
+                .score
+                  span
+                    | Superb
+                    em 350 Reviews
+                  strong 9.0
+        // /item
+        .item
+          .strip.grid
+            figure
+              a.wish_bt(href='detail-restaurant.html')
+              a(href='detail-restaurant.html')
+                img.img-fluid(src='front/img/location_6.jpeg', alt='', width='400', height='266')
+                .read_more
+                  span Read more
+              small Bar
+            .wrapper
+              h3
+                a(href='detail-restaurant.html') Eiffel Bar
+              p
+                | Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.
+              a.address(href='https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361') Get directions
+            ul
+              li
+                span.loc_closed Now Closed
+              li
+                .score
+                  span
+                    | Good
+                    em 350 Reviews
+                  strong 7.5
+
+      .container
+        .btn_home_align
+          a.btn_1.rounded(href='grid-listings-filterscol.html') View all
+
+    .bg_color_1
+      .container.margin_80_55
+        .main_title_2
+          span
+            em
+          h2 Popular Categories
+          p Cum doctus civibus efficiantur in imperdiet deterruisset.
+        .row.justify-content-center
+          .col-lg-3.col-md-6
+            a.box_cat_home(href='row-listings-filterscol.html')
+              i.icon_menu-circle_alt
+              img(src='front/img/icon_home_1.svg', width='65', height='65', alt='')
+              h3 Shops
+              ul
+                li
+                  strong 1240
+                  | Locations
+          .col-lg-3.col-md-6
+            a.box_cat_home(href='row-listings-filterscol.html')
+              i.icon_menu-circle_alt
+              img(src='front/img/icon_home_2.svg', width='65', height='65', alt='')
+              h3 Hotels
+              ul.clearfix
+                li
+                  strong 345
+                  | Locations
+          .col-lg-3.col-md-6
+            a.box_cat_home(href='row-listings-filterscol.html')
+              i.icon_menu-circle_alt
+              img(src='front/img/icon_home_3.svg', width='65', height='65', alt='')
+              h3 Restaurants
+              ul.clearfix
+                li
+                  strong 452
+                  | Locations
+          .col-lg-3.col-md-6
+            a.box_cat_home(href='row-listings-filterscol.html')
+              i.icon_menu-circle_alt
+              img(src='front/img/icon_home_4.svg', width='65', height='65', alt='')
+              h3 Bars
+              ul.clearfix
+                li
+                  strong 211
+                  | Locations
+          .col-lg-3.col-md-6
+            a.box_cat_home(href='row-listings-filterscol.html')
+              i.icon_menu-circle_alt
+              img(src='front/img/icon_home_5.svg', width='65', height='65', alt='')
+              h3 Events
+              ul.clearfix
+                li
+                  strong 146
+                  | Locations
+          .col-lg-3.col-md-6
+            a.box_cat_home(href='row-listings-filterscol.html')
+              i.icon_menu-circle_alt
+              img(src='front/img/icon_home_6.svg', width='65', height='65', alt='')
+              h3 Fitness
+              ul.clearfix
+                li
+                  strong 345
+                  | Locations
+
+
+    .call_section.image_bg
+      .wrapper
+        .container.margin_80_55
+          .main_title_2
+            span
+              em
+            h2 How it Works
+            p Cum doctus civibus efficiantur in imperdiet deterruisset.
+          .row
+            .col-md-4
+              .box_how.wow
+                i.pe-7s-search
+                h3 Search Locations
+                p
+                  | An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam id.
+                span
+            .col-md-4
+              .box_how
+                i.pe-7s-info
+                h3 View Location Info
+                p
+                  | An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam id.
+                span
+            .col-md-4
+              .box_how
+                i.pe-7s-like2
+                h3 Book, Reach or Call
+                p
+                  | An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam id.
+          // /row
+          p.text-center.add_top_30.wow.bounceIn(data-wow-delay='0.5')
+            a.btn_1.rounded(href='register.html') Register Now
+

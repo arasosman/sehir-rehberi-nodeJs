@@ -1,0 +1,231 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='Ansonika')
+        title SPARKER - Admin dashboard
+        // Favicons
+        link(rel='shortcut icon', href='/admin/img/favicon.ico', type='image/x-icon')
+        link(rel='apple-touch-icon', type='image/x-icon', href='/admin/img/apple-touch-icon-57x57-precomposed.png')
+        link(rel='apple-touch-icon', type='image/x-icon', sizes='72x72', href='/admin/img/apple-touch-icon-72x72-precomposed.png')
+        link(rel='apple-touch-icon', type='image/x-icon', sizes='114x114', href='/admin/img/apple-touch-icon-114x114-precomposed.png')
+        link(rel='apple-touch-icon', type='image/x-icon', sizes='144x144', href='/admin/img/apple-touch-icon-144x144-precomposed.png')
+        // Bootstrap core CSS
+        link(href='/admin/vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+        // Main styles
+        link(href='/admin/css/admin.css', rel='stylesheet')
+        // Icon fonts
+        link(href='/admin/vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+        // Plugin styles
+        link(href='/admin/vendor/datatables/dataTables.bootstrap4.css', rel='stylesheet')
+        link(href='/admin/vendor/dropzone.css', rel='stylesheet')
+        link(href='/admin/css/date_picker.css', rel='stylesheet')
+        // WYSIWYG Editor
+        link(rel='stylesheet', href='/admin/js/editor/summernote-bs4.css')
+    body#page-top.fixed-nav sticky-footer
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.bg-default.fixed-top
+            a.navbar-brand(href='index.html')
+                img(src='/admin/img/logo.png', data-retina='true', alt='', width='165', height='36')
+            button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarResponsive.collapse.navbar-collapse
+                ul#exampleAccordion.navbar-nav.navbar-sidenav
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='Dashboard')
+                        a.nav-link(href='/')
+                            i.fa.fa-fw.fa-dashboard
+                            span.nav-link-text Dashboard
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='Messages')
+                        a.nav-link(href='/message')
+                            i.fa.fa-fw.fa-envelope-open
+                            span.nav-link-text Messages
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='', data-original-title='Bookings')
+                        a.nav-link(href='bookings')
+                            i.fa.fa-fw.fa-calendar-check-o
+                            span.nav-link-text
+                                | Bookings
+                                span.badge.badge-pill.badge-primary 6 New
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='My listings')
+                        a.nav-link.nav-link-collapse.collapsed(data-toggle='collapse', href='/listing', data-parent='#mylistings')
+                            i.fa.fa-fw.fa-list
+                            span.nav-link-text My listings
+                        ul#collapseMylistings.sidenav-second-level.collapse
+                            li
+                                a(href='listings.html')
+                                    | Pending
+                                    span.badge.badge-pill.badge-primary 6
+                            li
+                                a(href='listings.html')
+                                    | Active
+                                    span.badge.badge-pill.badge-success 6
+                            li
+                                a(href='listings.html')
+                                    | Expired
+                                    span.badge.badge-pill.badge-danger 6
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='Reviews')
+                        a.nav-link(href='reviews.html')
+                            i.fa.fa-fw.fa-star
+                            span.nav-link-text Reviews
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='Bookmarks')
+                        a.nav-link(href='bookmarks.html')
+                            i.fa.fa-fw.fa-heart
+                            span.nav-link-text Bookmarks
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='Add listing')
+                        a.nav-link(href='add-listing.html')
+                            i.fa.fa-fw.fa-plus-circle
+                            span.nav-link-text Add listing
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='My profile')
+                        a.nav-link(href='user-profile.html')
+                            i.fa.fa-fw.fa-user
+                            span.nav-link-text My Profile
+                    li.nav-item(data-toggle='tooltip', data-placement='right', title='Components')
+                        a.nav-link.nav-link-collapse.collapsed(data-toggle='collapse', href='#collapseComponents', data-parent='#Components')
+                            i.fa.fa-fw.fa-gear
+                            span.nav-link-text Components
+                        ul#collapseComponents.sidenav-second-level.collapse
+                            li
+                                a(href='charts.html') Charts
+                            li
+                                a(href='tables.html') Tables
+                ul.navbar-nav.sidenav-toggler
+                    li.nav-item
+                        a#sidenavToggler.nav-link.text-center
+                            i.fa.fa-fw.fa-angle-left
+                ul.navbar-nav.ml-auto
+                    li.nav-item.dropdown
+                        a#messagesDropdown.nav-link.dropdown-toggle.mr-lg-2(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                            i.fa.fa-fw.fa-envelope
+                            span.d-lg-none
+                                | Messages
+                                span.badge.badge-pill.badge-primary 12 New
+                            span.indicator.text-primary.d-none.d-lg-block
+                                i.fa.fa-fw.fa-circle
+                        .dropdown-menu(aria-labelledby='messagesDropdown')
+                            h6.dropdown-header New Messages:
+                            .dropdown-divider
+                            a.dropdown-item(href='#')
+                                strong David Miller
+                                span.small.float-right.text-muted 11:21 AM
+                                .dropdown-message.small
+                                    | Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!
+                            .dropdown-divider
+                            a.dropdown-item(href='#')
+                                strong Jane Smith
+                                span.small.float-right.text-muted 11:21 AM
+                                .dropdown-message.small
+                                    | I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!
+                            .dropdown-divider
+                            a.dropdown-item(href='#')
+                                strong John Doe
+                                span.small.float-right.text-muted 11:21 AM
+                                .dropdown-message.small
+                                    | I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.
+                            .dropdown-divider
+                            a.dropdown-item.small(href='#') View all messages
+                    li.nav-item.dropdown
+                        a#alertsDropdown.nav-link.dropdown-toggle.mr-lg-2(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                            i.fa.fa-fw.fa-bell
+                            span.d-lg-none
+                                | Alerts
+                                span.badge.badge-pill.badge-warning 6 New
+                            span.indicator.text-warning.d-none.d-lg-block
+                                i.fa.fa-fw.fa-circle
+                        .dropdown-menu(aria-labelledby='alertsDropdown')
+                            h6.dropdown-header New Alerts:
+                            .dropdown-divider
+                            a.dropdown-item(href='#')
+                                span.text-success
+                                    strong
+                                        i.fa.fa-long-arrow-up.fa-fw
+                                        | Status Update
+                                span.small.float-right.text-muted 11:21 AM
+                                .dropdown-message.small This is an automated server response message. All systems are online.
+                            .dropdown-divider
+                            a.dropdown-item(href='#')
+                                span.text-danger
+                                    strong
+                                        i.fa.fa-long-arrow-down.fa-fw
+                                        | Status Update
+                                span.small.float-right.text-muted 11:21 AM
+                                .dropdown-message.small This is an automated server response message. All systems are online.
+                            .dropdown-divider
+                            a.dropdown-item(href='#')
+                                span.text-success
+                                    strong
+                                        i.fa.fa-long-arrow-up.fa-fw
+                                        | Status Update
+                                span.small.float-right.text-muted 11:21 AM
+                                .dropdown-message.small This is an automated server response message. All systems are online.
+                            .dropdown-divider
+                            a.dropdown-item.small(href='#') View all alerts
+                    li.nav-item
+                        form.form-inline.my-2.my-lg-0.mr-lg-2
+                            .input-group
+                                input.form-control.search-top(type='text', placeholder='Search for...')
+                                span.input-group-btn
+                                    button.btn.btn-primary(type='button')
+                                        i.fa.fa-search
+                    li.nav-item
+                        a.nav-link(data-toggle='modal', data-target='#exampleModal')
+                            i.fa.fa-fw.fa-sign-out
+                            | Logout
+        block content
+
+        footer.sticky-footer
+            .container
+                .text-center
+                    small Copyright © SPARKER 2018
+
+        a.scroll-to-top.rounded(href='#page-top')
+            i.fa.fa-angle-up
+        // Logout Modal
+        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#exampleModalLabel.modal-title Ready to Leave?
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body Select "Logout" below if you are ready to end your current session.
+                    .modal-footer
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Cancel
+                        a.btn.btn-primary(href='login.html') Logout
+        // Bootstrap core JavaScript
+        script(src='/admin/vendor/jquery/jquery.min.js')
+        script(src='/admin/vendor/bootstrap/js/bootstrap.bundle.min.js')
+        // Core plugin JavaScript
+        script(src='/admin/vendor/jquery-easing/jquery.easing.min.js')
+        // Page level plugin JavaScript
+        script(src='/admin/vendor/chart.js/Chart.min.js')
+        script(src='/admin/vendor/datatables/jquery.dataTables.js')
+        script(src='/admin/vendor/datatables/dataTables.bootstrap4.js')
+        script(src='/admin/vendor/jquery.selectbox-0.2.js')
+        script(src='/admin/vendor/retina-replace.min.js')
+        script(src='/admin/vendor/jquery.magnific-popup.min.js')
+        // Custom scripts for all pages
+        script(src='/admin/js/admin.js')
+        // Custom scripts for this page
+        script(src='/admin/vendor/dropzone.min.js')
+        script(src='/admin/vendor/bootstrap-datepicker.js')
+        script.
+            $('input.date-pick').datepicker();
+        // WYSIWYG Editor
+        script(src='/admin/js/editor/summernote-bs4.min.js')
+        script.
+            $('.editor').summernote({
+                fontSizes: ['10', '14'],
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough']],
+                    ['fontsize', ['fontsize']],
+                    ['para', ['ul', 'ol', 'paragraph']]
+                ],
+                placeholder: 'Write here ....',
+                tabsize: 2,
+                height: 200
+            });
+
+
