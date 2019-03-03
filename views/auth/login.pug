@@ -8,24 +8,24 @@ html(lang='en')
         meta(name='author', content='Ansonika')
         title SPARKER | Premium directory and listings template by Ansonika.
         // Favicons
-        link(rel='shortcut icon', href='front/img/favicon.ico', type='image/x-icon')
-        link(rel='apple-touch-icon', type='image/x-icon', href='img/apple-touch-icon-57x57-precomposed.png')
-        link(rel='apple-touch-icon', type='image/x-icon', sizes='72x72', href='front/img/apple-touch-icon-72x72-precomposed.png')
-        link(rel='apple-touch-icon', type='image/x-icon', sizes='114x114', href='front/img/apple-touch-icon-114x114-precomposed.png')
-        link(rel='apple-touch-icon', type='image/x-icon', sizes='144x144', href='front/img/apple-touch-icon-144x144-precomposed.png')
+        link(rel='shortcut icon', href='/front/img/favicon.ico', type='image/x-icon')
+        link(rel='apple-touch-icon', type='image/x-icon', href='/front/img/apple-touch-icon-57x57-precomposed.png')
+        link(rel='apple-touch-icon', type='image/x-icon', sizes='72x72', href='/front/img/apple-touch-icon-72x72-precomposed.png')
+        link(rel='apple-touch-icon', type='image/x-icon', sizes='114x114', href='/front/img/apple-touch-icon-114x114-precomposed.png')
+        link(rel='apple-touch-icon', type='image/x-icon', sizes='144x144', href='/front/img/apple-touch-icon-144x144-precomposed.png')
         // GOOGLE WEB FONT
         link(href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700', rel='stylesheet')
         // BASE CSS
-        link(href='front/css/bootstrap.min.css', rel='stylesheet')
-        link(href='front/css/style.css', rel='stylesheet')
-        link(href='front/css/vendors.css', rel='stylesheet')
+        link(href='/front/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/front/css/style.css', rel='stylesheet')
+        link(href='/front/css/vendors.css', rel='stylesheet')
     body#login_bg
         nav#menu.fake_menu
         #login
             aside
                 figure
                     a(href='/')
-                        img.logo_sticky(src='front/img/logo_sticky.svg', width='165', height='35', alt='')
+                        img.logo_sticky(src='/front/img/logo_sticky.svg', width='165', height='35', alt='')
                 form(method='post', action='/login')
                     #status
                         if !status
@@ -54,6 +54,6 @@ html(lang='en')
                 .copy © 2018 Sparker
         // /login
         // COMMON SCRIPTS
-        script(src='front/js/common_scripts.js')
-        script(src='front/js/functions.js')
-        script(src='front/assets/validate.js')
+        script(src='/front/js/common_scripts.js')
+        script(src='/front/js/functions.js')
+        script(src='/front/assets/validate.js')

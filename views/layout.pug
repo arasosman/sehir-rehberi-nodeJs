@@ -272,12 +272,8 @@ html(lang='en')
       #sign-in-dialog.zoom-anim-dialog.mfp-hide
         .small-dialog-header
           h3 Sign In
-        form
+        form(method='post', action='/login')
           .sign-in-wrapper
-            a.social_bt.facebook(href='#0') Login with Facebook
-            a.social_bt.google(href='#0') Login with Google
-            .divider
-              span Or
             .form-group
               label Email
               input#email.form-control(type='email', name='email')

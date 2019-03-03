@@ -17,6 +17,10 @@ router.get('/login', (req, res) => {
 
 router.post('/login', (req, res) => {
     const {email, password} = req.body;
+    //clear all cookies
+    res.clearCookie("token");
+    res.clearCookie("rememberme");
+    res.clearCookie("username");
 
     User.findOne({
         email
@@ -106,6 +110,7 @@ router.post('/api/login', (req, res) => {
 router.get('/register', (req,res) => {
     res.render('auth/register');
 });
+
 router.post('/register', (req,res) => {
     const {username, email, password, name, lastname} = req.body;
 
@@ -121,7 +126,7 @@ router.post('/register', (req,res) => {
 
         const promise = user.save();
         promise.then((data) => {
-            res.render('/login');
+            res.render('auth/login');
         }).catch((err) => {
             res.render('auth/register',{
                 status:false,
